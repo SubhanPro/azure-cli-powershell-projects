@@ -1,12 +1,12 @@
 # Screenshots
 
-This folder contains screenshots documenting the implementation and testing of the Azure RBAC DEV/PROD lab.
+This folder contains screenshots documenting the Azure CLI and Azure PowerShell administration exercises.
 
-Planned screenshots:
+Current screenshots:
 
-- Resource groups OCEAN-DEV and OCEAN-PROD
-- Contributor role assignment for OCEAN-DEV
-- Reader role assignment for OCEAN-PROD
-- Effective access verification
-- Successful operation in DEV
-- Denied operation in PROD
+- Azure Resource Groups created successfully
+- Azure Storage Accounts created successfully
+- Azure CLI deployment results
+- Azure PowerShell deployment results
+- Azure Portal verification
+- PowerShell command output
