@@ -1,50 +1,84 @@
-# Secure Azure DEV/PROD Environment with RBAC
+# Azure CLI & PowerShell Administration Lab
 
 ## Project overview
 
-This project demonstrates how Microsoft Azure Role-Based Access Control
-can be used to separate development and production environments.
+This project demonstrates how Microsoft Azure resources can be deployed and managed using both Azure CLI and Azure PowerShell.
 
-The goal was to provide developers with permission to manage resources
-in the development environment while allowing read-only access to the
-production environment.
+The goal of this project is to practice Azure administration through scripting instead of using the Azure Portal. All resources are created using Infrastructure as Code principles and can be reproduced by executing the provided scripts.
 
-## Business scenario
-
-Ocean Technologies uses two Azure environments:
-
-- `OCEAN-DEV` for development and testing
-- `OCEAN-PROD` for production workloads
-
-Members of the development team require:
-
-- Contributor access to `OCEAN-DEV`
-- Reader access to `OCEAN-PROD`
-- No permission to assign Azure roles
-- No Owner access at subscription level
-
-This configuration follows the principle of least privilege.
+---
 
 ## Technologies used
 
 - Microsoft Azure
-- Microsoft Entra ID
-- Azure Role-Based Access Control
-- Azure Resource Groups
-- Azure Storage Accounts
 - Azure CLI
 - Azure PowerShell
+- Azure Resource Groups
+- Azure Storage Accounts
+- Azure Role-Based Access Control (RBAC)
 - GitHub
+
+---
+
+## Project structure
+
+
+azure-cli/
+deploy.sh
+cleanup.sh
+
+powershell/
+deploy.ps1
+
+docs/
+access-test-results.md
+
+screenshots/
+
+
+---
+
+## Azure CLI tasks
+
+- Create Resource Groups
+- Create Storage Accounts
+- Verify deployed resources
+- Clean up Azure resources
+
+---
+
+## Azure PowerShell tasks
+
+- Create Resource Groups
+- Create Storage Accounts
+- Verify deployed resources
+
+---
 
 ## Architecture
 
-```text
 Azure Subscription
 │
 ├── Resource Group: OCEAN-DEV
-│   ├── Storage Account
-│   └── SG-Developers: Contributor
+│   └── Storage Account: oceandevstorage888
 │
-└── Resource Group: OCEAN-PROD
-    ├── Storage Account
-    └── SG-Developers: Reader
+├── Resource Group: OCEAN-PROD
+│   └── Storage Account: oceanprodstorage888
+│
+├── Resource Group: OCEAN-QA
+│   └── Storage Account: oceanqastorage888
+│
+└── Resource Group: OCEAN-STAGING
+    └── Storage Account: oceanstgstorage888
+
+---
+
+## Future improvements
+
+- Configure Azure RBAC
+- Create custom roles
+- Assign users and groups
+- Deploy Virtual Machines
+- Create Virtual Networks
+- Deploy Storage Containers
+- Automate deployments using ARM/Bicep
