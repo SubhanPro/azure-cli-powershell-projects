@@ -68,6 +68,8 @@ Azure Subscription
 │
 ├── Resource Group: OCEAN-DEV
 │   └── Storage Account: oceandevstorage888
+│       └── Blob Containers
+│           └── documents
 │
 ├── Resource Group: OCEAN-PROD
 │   └── Storage Account: oceanprodstorage888
