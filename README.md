@@ -45,7 +45,12 @@ screenshots/
 - Create Storage Accounts
 - Verify Azure resources
 - Delete Resource Groups
-
+- List Storage Accounts
+- Retrieve Storage Account Keys
+- Create Blob Containers
+- List Blob Containers
+- Delete Blob Containers
+- Verify Container Deletion
 ---
 
 ## Azure PowerShell Exercises
