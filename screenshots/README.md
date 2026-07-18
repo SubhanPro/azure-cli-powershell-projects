@@ -11,5 +11,12 @@ This folder contains screenshots documenting Azure CLI and Azure PowerShell admi
 - Blob Container List
 - Blob Container Deletion
 
+## Azure PowerShell
+
+- Storage Account management
+- Storage Account Keys
+- Blob Container creation
+- Blob Container listing
+- Blob Container deletion
 
 More screenshots will be added as the project grows.
