@@ -9,7 +9,9 @@ Get-AzStorageAccountKey `
     -Name oceanprodstorage888
 
 # Create Storage Context
-$context = $storageAccount.Context
+$context = New-AzStorageContext `
+    -StorageAccountName oceanprodstorage888 `
+    -UseConnectedAccount
 
 # Create Blob Container: documents
 New-AzStorageContainer `
@@ -28,8 +30,4 @@ Get-AzStorageContainer `
 # Remove backups Container
 Remove-AzStorageContainer `
     -Name backups `
-    -Context $context
-
-# Verify deletion
-Get-AzStorageContainer `
     -Context $context
